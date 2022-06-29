@@ -1,5 +1,11 @@
 version 2.1
 
+
+workflows:
+  configure:
+    jobs:
+      - configure_infrastructure
+
 jobs:
   configure_infrastructure: 
     docker:
@@ -18,7 +24,3 @@ jobs:
           command: |
             ansible-playbook -i inventory.txt main-remote.yml
 
-workflows:
-  configure:
-    jobs:
-      - configure_infrastructure
