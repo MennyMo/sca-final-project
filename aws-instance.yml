@@ -1,0 +1,30 @@
+Description: Creating SCA final project Instance
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      SecurityGroups:
+        - !Ref MyInstanceSecurityGroup
+      ImageId: ami-08d4ac5b634553e16
+      KeyName: scaproject
+      InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value: SheCodeAfrica
+  MyInstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: '8241'
+          ToPort: '8241'
+          CidrIp: 0.0.0.0/0
