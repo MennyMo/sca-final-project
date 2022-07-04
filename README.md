@@ -23,3 +23,7 @@ run the above command to run the setup role.
 
 
 Ansible enables host key checking by default. Checking host keys guards against server spoofing and man-in-the-middle attacks, but we dont need to check host because it's a known host.
+
+Below is the image of successful builds.
+
+<img width="1159" alt="Screenshot 2022-07-04 at 13 40 36" src="https://user-images.githubusercontent.com/62122656/177156979-ca7943a0-e3b2-48ca-b734-70ef246a4945.png">
